@@ -1,6 +1,11 @@
 
-let height=1.70;
-let weight=60;
 
-let  BMI=weight/height**2;
-console.log("Your BMI is " + Math.round(BMI));
+function calculateBmi() {
+    let weight= document.getElementById('weight').value
+    let height= document.getElementById('height').value
+
+    let bmi= weight / (height * height)
+
+    document.getElementById('heading').innerHTML = 'Your BMI is: '
+    document.getElementById('bmi-output').innerHTML = bmi
+}
